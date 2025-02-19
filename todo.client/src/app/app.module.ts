@@ -5,10 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { TaskTableComponent } from './task-table/task-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TaskTableComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
