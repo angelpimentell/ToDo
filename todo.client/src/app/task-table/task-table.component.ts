@@ -18,18 +18,12 @@ export class TaskTableComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    //this.getTasks();
+    this.getTasks();
   }
 
   getTasks() {
-    console.log('ADIOS1');
-
-    console.log(this.http.get<any>('/api/tasks'));
-
-    this.http.get<any>('/api/tasks').subscribe(
+    this.http.get<Task[]>('/api/tasks').subscribe(
       (result) => {
-        console.log('ADIOS2');
-        console.log(result);
         this.tasks = result;
       },
       (error) => {
