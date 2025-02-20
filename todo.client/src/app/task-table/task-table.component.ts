@@ -39,5 +39,17 @@ export class TaskTableComponent implements OnInit {
     });
   }
 
+  updateTask(task: Task) {
+    console.log(task);
+    this.http.put(`/api/tasks/${task.id}`, task).subscribe(
+      () => {
+        task.name = task.name;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
   
 }
