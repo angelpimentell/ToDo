@@ -17,9 +17,7 @@ The **ToDo Application** is a full-stack web application built with **C# ASP.NET
 ### Frontend:
 - Angular
 - TypeScript
-- Angular Material
-- RxJS
-- Bootstrap
+- Angular
 
 ## Installation and Setup
 
