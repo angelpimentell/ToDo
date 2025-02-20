@@ -14,6 +14,8 @@ interface Task {
 })
 export class TaskTableComponent implements OnInit {
   public tasks: Task[] = [];
+  isAddingRow = true;
+  newTask = { id: null, name: '' };
 
   constructor(private http: HttpClient) { }
 
@@ -40,10 +42,23 @@ export class TaskTableComponent implements OnInit {
   }
 
   updateTask(task: Task) {
-    console.log(task);
     this.http.put(`/api/tasks/${task.id}`, task).subscribe(
       () => {
-        task.name = task.name;
+        this.getTasks();
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
+  createTask() {
+    console.log(this.newTask);
+    this.http.post('/api/tasks', this.newTask).subscribe(
+      () => {
+        this.getTasks();
+        this.newTask.name = '';
+        this.newTask.id = null;
       },
       (error) => {
         console.error(error);

@@ -9,9 +9,14 @@
   <tbody>
     <tr *ngFor="let task of tasks">
       <td>{{ task.id }}</td>
-      <td><input type="text" [(ngModel)]="task.name"/></td>
+      <td><input type="text" [(ngModel)]="task.name" /></td>
       <td><button (click)="updateTask(task)">Editar</button></td>
       <td><button (click)="deleteTask(task.id)">Eliminar</button></td>
+    </tr>
+    <tr *ngIf="isAddingRow">
+      <td><input [(ngModel)]="newTask.id" placeholder="ID"></td>
+      <td><input [(ngModel)]="newTask.name" placeholder="Name"></td>
+      <td><button (click)="createTask()">Save</button></td>
     </tr>
   </tbody>
 </table>
