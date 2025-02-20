@@ -33,5 +33,11 @@ export class TaskTableComponent implements OnInit {
 
   }
 
+  deleteTask(id: number) {
+    this.http.delete(`/api/tasks/${id}`).subscribe(() => {
+      this.getTasks();
+    });
+  }
+
   
 }
