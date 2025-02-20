@@ -30,8 +30,8 @@ Ensure you have the following installed:
 ### Backend Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repository-url.git
-   cd todo-backend
+   git clone https://github.com/angelpimentell/ToDo.git
+   cd ToDo.Server
    ```
 2. Install dependencies:
    ```sh
@@ -75,5 +75,5 @@ If you would like to contribute to this project, follow these steps:
 This project is licensed under the MIT License.
 
 ## Contact
-For any issues or inquiries, please contact [your-email@example.com].
+For any issues or inquiries, please contact [angelpimentelcontact@gmail.com].
 
